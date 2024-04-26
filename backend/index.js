@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import connectDB from "./db/connectDB.js";
 dotenv.config();
 const app = express();
-
+app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
